@@ -1,0 +1,18 @@
+app_default:
+    resource: "@AppBundle/Resources/config/routing/default.yml"
+    prefix: /
+app_usuario:
+    resource: "@AppBundle/Resources/config/routing/usuario.yml"
+    prefix: /usuario
+app_solicitud:
+    resource: "@AppBundle/Resources/config/routing/solicitud.yml"
+    prefix: /solicitud
+app_laboratorio:
+    resource: "@AppBundle/Resources/config/routing/laboratorio.yml"
+    prefix: /laboratorio
+app_responsable:
+    resource: "@AppBundle/Resources/config/routing/responsable.yml"
+    prefix: /responsable
+app_horario:
+    resource: "@AppBundle/Resources/config/routing/horario.yml"
+    prefix: /horario

@@ -1,0 +1,24 @@
+solicitud_new:
+    path: /new
+    defaults: { _controller: "AppBundle:Solicitud:new" }
+    methods: POST
+
+solicitud_edit:
+    path: /edit
+    defaults: { _controller: "AppBundle:Solicitud:edit"}
+    methods: POST
+
+solicitud_list:
+    path: /list
+    defaults: { _controller: "AppBundle:Solicitud:list" }
+    methods: POST
+
+solicitud_listall:
+    path: /listall
+    defaults: { _controller: "AppBundle:Solicitud:listall" }
+    methods: POST
+
+solicitud_listforlaboratorio:
+    path: /listforlaboratorio
+    defaults: { _controller: "AppBundle:Solicitud:listforlaboratorio" }
+    methods: POST

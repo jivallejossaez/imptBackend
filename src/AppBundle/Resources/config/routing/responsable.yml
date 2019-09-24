@@ -1,0 +1,9 @@
+responsable_new:
+    path: /new
+    defaults: { _controller: "AppBundle:Responsable:new" }
+    methods: POST
+
+responsable_edit:
+    path: /edit
+    defaults: { _controller: "AppBundle:Responsable:edit" }
+    methods: POST

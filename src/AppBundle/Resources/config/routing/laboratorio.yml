@@ -1,0 +1,14 @@
+laboratorio_list:
+    path: /list
+    defaults: { _controller: "AppBundle:Laboratorio:list" }
+    methods: POST
+
+laboratorio_listresponsable:
+    path: /listresponsable
+    defaults: { _controller: "AppBundle:Laboratorio:listresponsable" }
+    methods: POST
+
+laboratorio_listTodosAction:
+    path: /listTodosAction
+    defaults: { _controller: "AppBundle:Laboratorio:listTodosAction" }
+    methods: POST

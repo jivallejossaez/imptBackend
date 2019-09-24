@@ -1,0 +1,81 @@
+BackendBundle\Entity\Laboratorio:
+    type: entity
+    table: laboratorios
+    indexes:
+        fk_laboratoriosresponsables:
+            columns:
+                - ref_responsable
+    id:
+        idLaboratorio:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_laboratorio
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombre:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        ubicacion:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        instituto:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        equipotrabajo:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        perfil:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        descripcion:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        tiposexperimentos:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        equipos:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        borrado:
+            type: boolean
+            nullable: true
+    manyToOne:
+        refResponsable:
+            targetEntity: Responsable
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ref_responsable:
+                    referencedColumnName: id_responsable
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

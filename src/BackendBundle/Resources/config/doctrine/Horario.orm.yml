@@ -1,0 +1,45 @@
+BackendBundle\Entity\Horario:
+    type: entity
+    table: horarios
+    indexes:
+        fk_horarioslaboratorios:
+            columns:
+                - ref_laboratorio
+    id:
+        idHorario:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_horario
+            generator:
+                strategy: IDENTITY
+    fields:
+        dia:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        hora:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+        borrado:
+            type: boolean
+            nullable: true
+    manyToOne:
+        refLaboratorio:
+            targetEntity: Laboratorio
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ref_laboratorio:
+                    referencedColumnName: id_laboratorio
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

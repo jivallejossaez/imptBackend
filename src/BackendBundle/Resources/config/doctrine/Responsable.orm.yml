@@ -1,0 +1,59 @@
+BackendBundle\Entity\Responsable:
+    type: entity
+    table: responsables
+    id:
+        idResponsable:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_responsable
+            generator:
+                strategy: IDENTITY
+    fields:
+        rut:
+            type: string
+            nullable: false
+            length: 9
+            options:
+                fixed: false
+        nivel:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        nombre:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+        apellido:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+        numeroTelefono:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: numero_telefono
+        clave:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        correo:
+            type: string
+            nullable: false
+            length: 150
+            options:
+                fixed: false
+        borrado:
+            type: boolean
+            nullable: true
+    lifecycleCallbacks: {  }

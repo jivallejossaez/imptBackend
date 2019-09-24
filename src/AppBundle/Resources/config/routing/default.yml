@@ -1,0 +1,24 @@
+default_index:
+    path: /
+    defaults: { _controller: "AppBundle:Default:index" }
+    methods: GET
+
+default_pruebasusuario:
+    path: /pruebasusuario
+    defaults: { _controller: "AppBundle:Default:pruebasusuario" }
+    methods: POST
+
+default_pruebaresponsable:
+    path: /pruebaresponsable
+    defaults: { _controller: "AppBundle:Default:pruebaresponsable" }
+    methods: POST
+
+default_loginUsuario:
+    path: /loginUsuario
+    defaults: { _controller: "AppBundle:Default:loginUsuario" }
+    methods: POST
+
+default_loginResponsable:
+    path: /loginResponsable
+    defaults: { _controller: "AppBundle:Default:loginResponsable" }
+    methods: POST

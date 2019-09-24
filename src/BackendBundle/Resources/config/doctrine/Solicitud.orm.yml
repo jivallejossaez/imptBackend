@@ -1,0 +1,52 @@
+BackendBundle\Entity\Solicitud:
+    type: entity
+    table: solicitudes
+    indexes:
+        fk_solicitausuarios:
+            columns:
+                - ref_usuario
+        fk_solicitahorarios:
+            columns:
+                - ref_horario
+    id:
+        idSolicitud:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_solicitud
+            generator:
+                strategy: IDENTITY
+    fields:
+        estado:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        borrado:
+            type: boolean
+            nullable: true
+    manyToOne:
+        refHorario:
+            targetEntity: Horario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ref_horario:
+                    referencedColumnName: id_horario
+            orphanRemoval: false
+        refUsuario:
+            targetEntity: Usuario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ref_usuario:
+                    referencedColumnName: id_usuario
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
